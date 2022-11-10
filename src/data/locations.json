@@ -1,0 +1,832 @@
+{
+    "Las Vegas, Nevada, USA": {
+        "gpsLang": "-115.148516",
+        "gpsLat": "36.1672559",
+        "_id": "svYvyLne3QNiMVfX"
+    },
+    "Abu Dhabi, Abu Dhabi, United Arab Emirates": {
+        "gpsLang": "54.3774014",
+        "gpsLat": "24.4538352",
+        "_id": "qMZNlzDYfE05n6oY"
+    },
+    "Jacksonville, Florida, USA": {
+        "gpsLang": "-81.655651",
+        "gpsLat": "30.3321838",
+        "_id": "WJ1nCVBPR5E30KWx"
+    },
+    "Brasilia, Distrito Federal, Brazil": {
+        "gpsLang": "-47.8823172",
+        "gpsLat": "-15.7934036",
+        "_id": "L9LyDEyGpGwSftfP"
+    },
+    "Norfolk, Virginia, USA": {
+        "gpsLang": "-76.2602336",
+        "gpsLat": "36.8968052",
+        "_id": "77Rc9MyoKrEOlEEa"
+    },
+    "Auckland, New Zealand": {
+        "gpsLang": "174.7631803",
+        "gpsLat": "-36.852095",
+        "_id": "f6z0uwLCJSQECuIU"
+    },
+    "Rio Rancho, New Mexico, USA": {
+        "gpsLang": "-106.632819",
+        "gpsLat": "35.269381",
+        "_id": "8TwiSaLkGDoHN6cH"
+    },
+    "Houston, Texas, USA": {
+        "gpsLang": "-95.3676974",
+        "gpsLat": "29.7589382",
+        "_id": "vo9K02mQaLFy0XgU"
+    },
+    "Raleigh, North Carolina, USA": {
+        "gpsLang": "-78.6390989",
+        "gpsLat": "35.7803977",
+        "_id": "46cBAm2lCmsLZkTr"
+    },
+    "Busan, South Korea": {
+        "gpsLang": "129.0752365",
+        "gpsLat": "35.1799528",
+        "_id": "cNMjhJo1ErJZuZir"
+    },
+    "Washington, DC, USA": {
+        "gpsLang": "-77.0365427",
+        "gpsLat": "38.8950368",
+        "_id": "Tqx9Or0ftLuvvoq3"
+    },
+    "Sao Paulo, Sao Paulo, Brazil": {
+        "gpsLang": "-46.6333824",
+        "gpsLat": "-23.5506507",
+        "_id": "QXqlZ8iwW8xpTZ3p"
+    },
+    "Moscow, Moscow, Russia": {
+        "gpsLang": "37.6174943",
+        "gpsLat": "55.7504461",
+        "_id": "7LBk9uTO4D6r0gzr"
+    },
+    "New York City, New York, USA": {
+        "gpsLang": "-74.0060152",
+        "gpsLat": "40.7127281",
+        "_id": "LINJKxU5oonA9vtr"
+    },
+    "Kallang, Singapore": {
+        "gpsLang": "103.866262",
+        "gpsLat": "1.310759",
+        "_id": "gfpmhNbr3JoekG38"
+    },
+    "Boston, Massachusetts, USA": {
+        "gpsLang": "-71.060511",
+        "gpsLat": "42.3554334",
+        "_id": "cOvnTpfGAnGWY9Lr"
+    },
+    "Tampa, Florida, USA": {
+        "gpsLang": "-82.458444",
+        "gpsLat": "27.9477595",
+        "_id": "J2YNiPGzIQ2SDbAe"
+    },
+    "Melbourne, Victoria, Australia": {
+        "gpsLang": "144.9631608",
+        "gpsLat": "-37.8142176",
+        "_id": "08NVN6t3mZKTPdW5"
+    },
+    "Copenhagen, Denmark": {
+        "gpsLang": "12.5700724",
+        "gpsLat": "55.6867243",
+        "_id": "AvsUTzrdBT9HYuKN"
+    },
+    "Mexico City, Distrito Federal, Mexico": {
+        "gpsLang": "-99.1757289",
+        "gpsLat": "19.4239552",
+        "_id": "Bcu25vAv0EednWVU"
+    },
+    "Vancouver, British Columbia, Canada": {
+        "gpsLang": "-123.113952",
+        "gpsLat": "49.2608724",
+        "_id": "yqrgNCDEKk3J466V"
+    },
+    "Shenzhen, Guangdong, China": {
+        "gpsLang": "114.0545429",
+        "gpsLat": "22.5445741",
+        "_id": "zXHwuY1SXoFvNlA5"
+    },
+    "Anaheim, California, USA": {
+        "gpsLang": "-117.911732",
+        "gpsLat": "33.8347516",
+        "_id": "TiyWF8kiD8jJBq35"
+    },
+    "Montevideo, Uruguay": {
+        "gpsLang": "-56.178654",
+        "gpsLat": "-34.8927002",
+        "_id": "LGrTIccY1Ry5Wptn"
+    },
+    "Newark, New Jersey, USA": {
+        "gpsLang": "-74.1723667",
+        "gpsLat": "40.735657",
+        "_id": "4XHRBD8OSz0Z3vIK"
+    },
+    "Edmonton, Alberta, Canada": {
+        "gpsLang": "-113.491241",
+        "gpsLat": "53.5462055",
+        "_id": "EBf0RNt3pwXKlaD1"
+    },
+    "San Antonio, Texas, USA": {
+        "gpsLang": "-98.4951405",
+        "gpsLat": "29.4246002",
+        "_id": "CNYJ8Jzn9gTxkhIf"
+    },
+    "Sacramento, California, USA": {
+        "gpsLang": "-121.493895",
+        "gpsLat": "38.5810606",
+        "_id": "MRbF31Y9I77tj25S"
+    },
+    "Minneapolis, Minnesota, USA": {
+        "gpsLang": "-93.2654692",
+        "gpsLat": "44.9772995",
+        "_id": "qAJsuvTGv1fxq28m"
+    },
+    "Greenville, South Carolina, USA": {
+        "gpsLang": "-82.3984882",
+        "gpsLat": "34.851354",
+        "_id": "d1EOrpN8gXJjNgWG"
+    },
+    "Chicago, Illinois, USA": {
+        "gpsLang": "-87.6244212",
+        "gpsLat": "41.8755616",
+        "_id": "5Y3KunCYSEXKAxel"
+    },
+    "Stockholm, Sweden": {
+        "gpsLang": "18.0710935",
+        "gpsLat": "59.3251172",
+        "_id": "EVejzTOu2DQdSMz3"
+    },
+    "Rochester, New York, USA": {
+        "gpsLang": "-77.615214",
+        "gpsLat": "43.157285",
+        "_id": "c8WQic9V8aN16m6M"
+    },
+    "Rio de Janeiro, Rio de Janeiro, Brazil": {
+        "gpsLang": "-43.2093727",
+        "gpsLat": "-22.9110137",
+        "_id": "dVV8OB9GYV5KQdfd"
+    },
+    "Ottawa, Ontario, Canada": {
+        "gpsLang": "-75.6901106",
+        "gpsLat": "45.4208777",
+        "_id": "kWdJ0gAlhbPcGPdh"
+    },
+    "Sunrise, Florida, USA": {
+        "gpsLang": "-80.2787573",
+        "gpsLat": "26.1666888",
+        "_id": "clJHxG1ihLQW2Vb9"
+    },
+    "Saint Petersburg, Saint Petersburg, Russia": {
+        "gpsLang": "30.316229",
+        "gpsLat": "59.938732",
+        "_id": "U6totKQwoyB4Gcfe"
+    },
+    "Atlanta, Georgia, USA": {
+        "gpsLang": "-84.3902644",
+        "gpsLat": "33.7489924",
+        "_id": "jR6G8H4Y9yI7Klgt"
+    },
+    "Philadelphia, Pennsylvania, USA": {
+        "gpsLang": "-75.1635262",
+        "gpsLat": "39.9527237",
+        "_id": "uHqRHt5IaqXMqT3l"
+    },
+    "Nashville, Tennessee, USA": {
+        "gpsLang": "-86.7742984",
+        "gpsLat": "36.1622767",
+        "_id": "antdiMQm4C83S27f"
+    },
+    "London, England, United Kingdom": {
+        "gpsLang": "-0.1276474",
+        "gpsLat": "51.5073219",
+        "_id": "aKk2JhAyVq0pxS9k"
+    },
+    "Wichita, Kansas, USA": {
+        "gpsLang": "-97.3375448",
+        "gpsLat": "37.6922361",
+        "_id": "g0l9tq2HRmAa24e3"
+    },
+    "Prague, Czech Republic": {
+        "gpsLang": "14.4212535",
+        "gpsLat": "50.0874654",
+        "_id": "VwgDDswlcsXHGXUK"
+    },
+    "Phoenix, Arizona, USA": {
+        "gpsLang": "-112.074141",
+        "gpsLat": "33.4484367",
+        "_id": "pmUlj8VqEwflDEKT"
+    },
+    "Fortaleza, Ceara, Brazil": {
+        "gpsLang": "-38.5217989",
+        "gpsLat": "-3.7304512",
+        "_id": "s5JJkpKvF1GpE5nd"
+    },
+    "Brooklyn, New York, USA": {
+        "gpsLang": "-73.9497211",
+        "gpsLat": "40.6526006",
+        "_id": "5glmjWN0SQop5SCR"
+    },
+    "Los Angeles, California, USA": {
+        "gpsLang": "-118.242766",
+        "gpsLat": "34.0536909",
+        "_id": "VzA07S2FKcBKVv52"
+    },
+    "Milwaukee, Wisconsin, USA": {
+        "gpsLang": "-87.922497",
+        "gpsLat": "43.0349931",
+        "_id": "rPK1tsqVxh2wEzUo"
+    },
+    "Toronto, Ontario, Canada": {
+        "gpsLang": "-79.3839347",
+        "gpsLat": "43.6534817",
+        "_id": "511nWiqFwwzQIRlJ"
+    },
+    "Adelaide, South Australia, Australia": {
+        "gpsLang": "138.5999312",
+        "gpsLat": "-34.9281805",
+        "_id": "QxGc9ZbjWgveUgHc"
+    },
+    "Beijing, China": {
+        "gpsLang": "116.3912757",
+        "gpsLat": "39.906217",
+        "_id": "Fua3S9uq18fOopQt"
+    },
+    "Buenos Aires, Buenos Aires, Argentina": {
+        "gpsLang": "9.2147675",
+        "gpsLat": "45.4838459",
+        "_id": "Y2jc6PdWI53wEgB6"
+    },
+    "Denver, Colorado, USA": {
+        "gpsLang": "-104.984862",
+        "gpsLat": "39.7392364",
+        "_id": "Xie28UxrdDUMeB6B"
+    },
+    "Moncton, New Brunswick, Canada": {
+        "gpsLang": "-64.80011",
+        "gpsLat": "46.097995",
+        "_id": "AsYXRyJUBTZLOTcb"
+    },
+    "Dallas, Texas, USA": {
+        "gpsLang": "-96.7968559",
+        "gpsLat": "32.7762719",
+        "_id": "ytpW0xTWH4HMPMxo"
+    },
+    "Lincoln, Nebraska, USA": {
+        "gpsLang": "-96.7077751",
+        "gpsLat": "40.8088861",
+        "_id": "cwi1KWWagn27mpDb"
+    },
+    "Calgary, Alberta, Canada": {
+        "gpsLang": "-114.065465",
+        "gpsLat": "51.0460954",
+        "_id": "Cr4y1DCqmYzo5zDv"
+    },
+    "Hamburg, Hamburg, Germany": {
+        "gpsLang": "9.9776028",
+        "gpsLat": "53.5565323",
+        "_id": "ire4h6kxQHlmE1Us"
+    },
+    "Boise, Idaho, USA": {
+        "gpsLang": "-116.200886",
+        "gpsLat": "43.6166163",
+        "_id": "xYRlJT0ExMtuzP0P"
+    },
+    "Utica, New York, USA": {
+        "gpsLang": "-75.2326641",
+        "gpsLat": "43.1009031",
+        "_id": "LkDOppyKR0yVOQDV"
+    },
+    "Liverpool, England, United Kingdom": {
+        "gpsLang": "-2.99168",
+        "gpsLat": "53.4071991",
+        "_id": "qVAsD4jK0dNu5XId"
+    },
+    "Santiago, Chile": {
+        "gpsLang": "-70.6504502",
+        "gpsLat": "-33.4377756",
+        "_id": "FWfOHziAa7rSZhfW"
+    },
+    "Atlantic City, New Jersey, USA": {
+        "gpsLang": "-74.4229351",
+        "gpsLat": "39.3642852",
+        "_id": "n8RtdcdmIjPiMYVL"
+    },
+    "Glendale, Arizona, USA": {
+        "gpsLang": "-112.1859941",
+        "gpsLat": "33.5386858",
+        "_id": "i6zyNTYCjykobMB7"
+    },
+    "Orlando, Florida, USA": {
+        "gpsLang": "-81.3790304",
+        "gpsLat": "28.5421109",
+        "_id": "TiXjqYLx2DSJfuw7"
+    },
+    "Austin, Texas, USA": {
+        "gpsLang": "-97.7436995",
+        "gpsLat": "30.2711286",
+        "_id": "ZsI2bLf5WqN6jS9t"
+    },
+    "Perth, Western Australia, Australia": {
+        "gpsLang": "115.8605801",
+        "gpsLat": "-31.9558964",
+        "_id": "UWnZwHHctLnMwFrK"
+    },
+    "Belem, Para, Brazil": {
+        "gpsLang": "-48.4682453",
+        "gpsLat": "-1.45056",
+        "_id": "j56F6wcHWdTCQ57N"
+    },
+    "Charlotte, North Carolina, USA": {
+        "gpsLang": "-80.8430827",
+        "gpsLat": "35.2272086",
+        "_id": "zJtS3gFGvR3DqZgI"
+    },
+    "St. Louis, Missouri, USA": {
+        "gpsLang": "-90.2428756",
+        "gpsLat": "38.6319657",
+        "_id": "cYLvMRnnhdy7EqvP"
+    },
+    "Winnipeg, Manitoba, Canada": {
+        "gpsLang": "-97.1384584",
+        "gpsLat": "49.8955367",
+        "_id": "1xgHnhPXXcqREY40"
+    },
+    "Fresno, California, USA": {
+        "gpsLang": "-119.7848307",
+        "gpsLat": "36.7394421",
+        "_id": "mlVvNK8INvE2lszi"
+    },
+    "Detroit, Michigan, USA": {
+        "gpsLang": "-83.0466403",
+        "gpsLat": "42.3315509",
+        "_id": "OWFv0ejVTFM2OXuY"
+    },
+    "Shanghai, Hebei, China": {
+        "gpsLang": "117.5932807",
+        "gpsLat": "40.1840602",
+        "_id": "zIiVhjC55MOL4waq"
+    },
+    "Sydney, New South Wales, Australia": {
+        "gpsLang": "151.2082848",
+        "gpsLat": "-33.8698439",
+        "_id": "I4V6QXr8dlyXe8HN"
+    },
+    "Gdansk, Poland": {
+        "gpsLang": "18.61298210330077",
+        "gpsLat": "54.3706858",
+        "_id": "Iuf4snhTHKlE7QCL"
+    },
+    "Saitama, Saitama, Japan": {
+        "gpsLang": "139.6457957",
+        "gpsLat": "35.8616402",
+        "_id": "f75N1YXSWpLuFDoG"
+    },
+    "Pittsburgh, Pennsylvania, USA": {
+        "gpsLang": "-80.6243098",
+        "gpsLat": "40.3693889",
+        "_id": "P0lzERbPJUcXHZRU"
+    },
+    "Rotterdam, Zuid-Holland, Netherlands": {
+        "gpsLang": "4.5098521",
+        "gpsLat": "51.9049018",
+        "_id": "lqfDuwlrRaob9Daj"
+    },
+    "Uniondale, New York, USA": {
+        "gpsLang": "-73.592341",
+        "gpsLat": "40.7095827",
+        "_id": "TlpsEs9OyQC4ZCVj"
+    },
+    "Glasgow, Scotland, United Kingdom": {
+        "gpsLang": "-4.2488787",
+        "gpsLat": "55.8609825",
+        "_id": "1aYUceUNZ5MYm8AB"
+    },
+    "Oklahoma City, Oklahoma, USA": {
+        "gpsLang": "-97.5170536",
+        "gpsLat": "35.4729886",
+        "_id": "aMmnpGgUu3FcoO5A"
+    },
+    "Kansas City, Missouri, USA": {
+        "gpsLang": "-94.5781416",
+        "gpsLat": "39.100105",
+        "_id": "9l9ebyCEgc1tuVWk"
+    },
+    "Buffalo, New York, USA": {
+        "gpsLang": "-78.8783922",
+        "gpsLat": "42.8867166",
+        "_id": "ejcVO6gGrX9wqHYQ"
+    },
+    "Halifax, Nova Scotia, Canada": {
+        "gpsLang": "-63.5859487",
+        "gpsLat": "44.648618",
+        "_id": "7SMvAF7W9m8M5n1y"
+    },
+    "Albany, New York, USA": {
+        "gpsLang": "-73.754968",
+        "gpsLat": "42.6511674",
+        "_id": "u8wQCkagydRNEzo0"
+    },
+    "Belfast, Northern Ireland, United Kingdom": {
+        "gpsLang": "-5.9301829",
+        "gpsLat": "54.596391",
+        "_id": "lPanaOsQXzum0iQ8"
+    },
+    "Manchester, England, United Kingdom": {
+        "gpsLang": "-2.2451148",
+        "gpsLat": "53.4794892",
+        "_id": "jF1DlWfMml0frmAi"
+    },
+    "Portland, Oregon, USA": {
+        "gpsLang": "-122.674194",
+        "gpsLat": "45.5202471",
+        "_id": "gNVU0rdp1SqDEFQt"
+    },
+    "Hidalgo, Texas, USA": {
+        "gpsLang": "-98.216445",
+        "gpsLat": "26.3530256",
+        "_id": "bm0URDkmWvo10DRs"
+    },
+    "Cleveland, Ohio, USA": {
+        "gpsLang": "-81.6936813",
+        "gpsLat": "41.4996562",
+        "_id": "ConynUxSmpmvUIBH"
+    },
+    "Salt Lake City, Utah, USA": {
+        "gpsLang": "-111.8867975",
+        "gpsLat": "40.7596198",
+        "_id": "BlkrViruBFwmD42q"
+    },
+    "Sioux Falls, South Dakota, USA": {
+        "gpsLang": "-96.7307737",
+        "gpsLat": "43.5488256",
+        "_id": "iuYJqirV9AjLnOsw"
+    },
+    "Curitiba, Parana, Brazil": {
+        "gpsLang": "-49.2712724",
+        "gpsLat": "-25.4295963",
+        "_id": "mmVWxmRQS26yoGv6"
+    },
+    "Zagreb, Croatia": {
+        "gpsLang": "15.962231476593626",
+        "gpsLat": "45.84264135",
+        "_id": "ZrmWTV1rhsA5K1Pl"
+    },
+    "Brisbane, Queensland, Australia": {
+        "gpsLang": "153.0234991",
+        "gpsLat": "-27.4689682",
+        "_id": "0A2jhcctkFPi2BJp"
+    },
+    "Seoul, South Korea": {
+        "gpsLang": "126.9782914",
+        "gpsLat": "37.5666791",
+        "_id": "cFFP2j8ESKU6cNWw"
+    },
+    "Monterrey, Nuevo Leon, Mexico": {
+        "gpsLang": "-100.315258",
+        "gpsLat": "25.6802019",
+        "_id": "ZASWepuriBtIovOM"
+    },
+    "Dublin, Leinster, Ireland": {
+        "gpsLang": "-6.2602964",
+        "gpsLat": "53.3498006",
+        "_id": "ypxRauydxVnKrzd4"
+    },
+    "Saitama, Japan": {
+        "gpsLang": "139.4160114",
+        "gpsLat": "35.9754168",
+        "_id": "ZMcEbFeSTz3MPNGY"
+    },
+    "Saskatoon, Saskatchewan, Canada": {
+        "gpsLang": "-106.660767",
+        "gpsLat": "52.131802",
+        "_id": "QNiNukJsCJbUiNVA"
+    },
+    "San Diego, California, USA": {
+        "gpsLang": "-117.1627728",
+        "gpsLat": "32.7174202",
+        "_id": "5oX7BiJ3HH5c5Q08"
+    },
+    "Hollywood, Florida, USA": {
+        "gpsLang": "-80.1494901",
+        "gpsLat": "26.0112014",
+        "_id": "STmER5Zd4m1dyAyP"
+    },
+    "Berlin, Berlin, Germany": {
+        "gpsLang": "13.4349112",
+        "gpsLat": "52.5103817",
+        "_id": "0HEZZ4HCNQvhddyY"
+    },
+    "New Orleans, Louisiana, USA": {
+        "gpsLang": "-90.0782127",
+        "gpsLat": "29.9759983",
+        "_id": "iBH0h6Z66CVEQtM3"
+    },
+    "Goiania, Goias, Brazil": {
+        "gpsLang": "-49.2532691",
+        "gpsLat": "-16.680882",
+        "_id": "BoE3ryw7aUngSQ2U"
+    },
+    "Manila, Philippines": {
+        "gpsLang": "120.9782618",
+        "gpsLat": "14.5948914",
+        "_id": "vOacC9CWCb9eJeEr"
+    },
+    "Montreal, Quebec, Canada": {
+        "gpsLang": "-73.5698065",
+        "gpsLat": "45.5031824",
+        "_id": "pUVOJFkG9oXkN7Su"
+    },
+    "Krakow, Poland": {
+        "gpsLang": "19.9368564",
+        "gpsLat": "50.0619474",
+        "_id": "RY5nKRmJCEOGlv0L"
+    },
+    "Fairfax, Virginia, USA": {
+        "gpsLang": "-77.3063733",
+        "gpsLat": "38.8462236",
+        "_id": "7gVOTZHe5caOZeCu"
+    },
+    "Rio de Janeiro, Brazil": {
+        "gpsLang": "-43.2093727",
+        "gpsLat": "-22.9110137",
+        "_id": "6kJHDy7Tv0ywYUX4"
+    },
+    "Porto Alegre, Rio Grande do Sul, Brazil": {
+        "gpsLang": "-51.2303767",
+        "gpsLat": "-30.0324999",
+        "_id": "RgAqhbmyD8Lt0tOD"
+    },
+    "Broomfield, Colorado, USA": {
+        "gpsLang": "-105.05208",
+        "gpsLat": "39.9403995",
+        "_id": "lybbNucfq8hGE8TV"
+    },
+    "Barueri, Sao Paulo, Brazil": {
+        "gpsLang": "-46.8764612",
+        "gpsLat": "-23.5112184",
+        "_id": "p5U24mxSYeHJkKx0"
+    },
+    "Uberlandia, Minas Gerais, Brazil": {
+        "gpsLang": "-48.2767837",
+        "gpsLat": "-18.9188041",
+        "_id": "I7P3m7ei8kYQVMNh"
+    },
+    "Ledyard, Connecticut, USA": {
+        "gpsLang": "-72.0175193",
+        "gpsLat": "41.4386053",
+        "_id": "OvhMVLowXksSfXBG"
+    },
+    "Tulsa, Oklahoma, USA": {
+        "gpsLang": "-95.9927436",
+        "gpsLat": "36.1563122",
+        "_id": "loBSD2K9oC3pTj08"
+    },
+    "Macau, China": {
+        "gpsLang": "113.5380454",
+        "gpsLat": "22.1899448",
+        "_id": "JeO2jJPwHZHHbini"
+    },
+    "Bangor, Maine, USA": {
+        "gpsLang": "-68.7778138",
+        "gpsLat": "44.8011821",
+        "_id": "aKpnSwEDDy6tiE2j"
+    },
+    "San Jose, California, USA": {
+        "gpsLang": "-121.890591",
+        "gpsLat": "37.3361663",
+        "_id": "zWReCDdV54IYAuDO"
+    },
+    "Albuquerque, New Mexico, USA": {
+        "gpsLang": "-106.650985",
+        "gpsLat": "35.0841034",
+        "_id": "WONdIaEJQLWihsRk"
+    },
+    "Sao Paulo, Brazil": {
+        "gpsLang": "-46.6333824",
+        "gpsLat": "-23.5506507",
+        "_id": "ZjRlvjM8upSSJlHe"
+    },
+    "Berlin, Germany": {
+        "gpsLang": "13.3888599",
+        "gpsLat": "52.5170365",
+        "_id": "VOrlfrS6V4CVFoa8"
+    },
+    "Cincinnati, Ohio, USA": {
+        "gpsLang": "-84.5124602",
+        "gpsLat": "39.1014537",
+        "_id": "adJIy9rfWvHrdtUs"
+    },
+    "Baltimore, Maryland, USA": {
+        "gpsLang": "-76.610759",
+        "gpsLat": "39.2908816",
+        "_id": "rJ4FfsR1XCVpDXeY"
+    },
+    "Quebec City, Quebec, Canada": {
+        "gpsLang": "-71.38577821056776",
+        "gpsLat": "46.792174849999995",
+        "_id": "sHesLVbcNszA1gey"
+    },
+    "Abu Dhabi, United Arab Emirates": {
+        "gpsLang": "54.3774014",
+        "gpsLat": "24.4538352",
+        "_id": "0GIzwOUnv0I5o8KU"
+    },
+    "Natal, Rio Grande do Norte, Brazil": {
+        "gpsLang": "-35.2080905",
+        "gpsLat": "-5.805398",
+        "_id": "10cvHnCt6MRS6FKJ"
+    },
+    "Jaragua do Sul, Santa Catarina, Brazil": {
+        "gpsLang": "-49.0778063",
+        "gpsLat": "-26.4897432",
+        "_id": "z7djKmqmjft6pwf7"
+    },
+    "Duluth, Georgia, USA": {
+        "gpsLang": "-84.1441046",
+        "gpsLat": "34.0028569",
+        "_id": "XRPPK5C3Xn2wIJkX"
+    },
+    "Singapore, Singapore": {
+        "gpsLang": "103.8194992",
+        "gpsLat": "1.357107",
+        "_id": "6chkntAKjqsXZv07"
+    },
+    "Fort Campbell, Kentucky, USA": {
+        "gpsLang": "-87.61568844317374",
+        "gpsLat": "36.631338299999996",
+        "_id": "ryZsSWt5pi99N2Ct"
+    },
+    "Belo Horizonte, Minas Gerais, Brazil": {
+        "gpsLang": "-43.9450948",
+        "gpsLat": "-19.9227318",
+        "_id": "dpqWWH1CgB0zHLES"
+    },
+    "Indianapolis, Indiana, USA": {
+        "gpsLang": "-86.1583502",
+        "gpsLat": "39.7683331",
+        "_id": "pib0RiZKtDgnnL20"
+    },
+    "Seattle, Washington, USA": {
+        "gpsLang": "-122.330062",
+        "gpsLat": "47.6038321",
+        "_id": "Gk5a04bqjvOdRatP"
+    },
+    "Gold Coast, Queensland, Australia": {
+        "gpsLang": "153.4145987",
+        "gpsLat": "-28.0023731",
+        "_id": "ac6lBnO68TdtO3kK"
+    },
+    "Nottingham, England, United Kingdom": {
+        "gpsLang": "-1.1496461",
+        "gpsLat": "52.9534193",
+        "_id": "WoLyhAbec782oSJq"
+    },
+    "East Rutherford, New Jersey, USA": {
+        "gpsLang": "-74.0970865",
+        "gpsLat": "40.833989",
+        "_id": "4XSJ1WS7ipmn0f3e"
+    },
+    "Omaha, Nebraska, USA": {
+        "gpsLang": "-95.9383758",
+        "gpsLat": "41.2587459",
+        "_id": "DMiZHkCJAUEYWlXW"
+    },
+    "Birmingham, England, United Kingdom": {
+        "gpsLang": "-1.9026911",
+        "gpsLat": "52.4796992",
+        "_id": "CicgogOLLDawqZUm"
+    },
+    "Louisville, Kentucky, USA": {
+        "gpsLang": "-85.759407",
+        "gpsLat": "38.2542376",
+        "_id": "9sXcFmo8I9oghNIP"
+    },
+    "Killeen, Texas, USA": {
+        "gpsLang": "-97.727796",
+        "gpsLat": "31.1171441",
+        "_id": "RNKviyQS6gX7rm2l"
+    },
+    "Auburn Hills, Michigan, USA": {
+        "gpsLang": "-83.2341028",
+        "gpsLat": "42.6875323",
+        "_id": "uKrboiQwJPPnK2SI"
+    },
+    "Oberhausen, North Rhine-Westphalia, Germany": {
+        "gpsLang": "6.8514435",
+        "gpsLat": "51.4696137",
+        "_id": "ZAqkQSCR95VXyWOQ"
+    },
+    "Oakland, California, USA": {
+        "gpsLang": "-122.271356",
+        "gpsLat": "37.8044557",
+        "_id": "wgxUJDzbM0Fqk49C"
+    },
+    "Memphis, Tennessee, USA": {
+        "gpsLang": "-89.9668758",
+        "gpsLat": "35.1335022",
+        "_id": "jB4KGj2ovDEZ9Whb"
+    },
+    "Cologne, North Rhine-Westphalia, Germany": {
+        "gpsLang": "6.959974",
+        "gpsLat": "50.938361",
+        "_id": "dGpmuV1H74oUMGNp"
+    },
+    "Columbus, Ohio, USA": {
+        "gpsLang": "-83.0007065",
+        "gpsLat": "39.9622601",
+        "_id": "Daon40yJSL3WC5eY"
+    },
+    "Fayetteville, North Carolina, USA": {
+        "gpsLang": "-78.878292",
+        "gpsLat": "35.0525759",
+        "_id": "NpUMrKxjx07g0mCi"
+    },
+    "Rosemont, Illinois, USA": {
+        "gpsLang": "-87.8756737",
+        "gpsLat": "41.9941334",
+        "_id": "UhGQEADXcUbJbZ0L"
+    },
+    "Newcastle, England, United Kingdom": {
+        "gpsLang": "-1.6131572",
+        "gpsLat": "54.9738474",
+        "_id": "nXOcsEccckvVHUjc"
+    },
+    "Uncasville, Connecticut, USA": {
+        "gpsLang": "-72.1097996",
+        "gpsLat": "41.4345426",
+        "_id": "MT6OSVti8WBm3LsR"
+    },
+    "Miami, Florida, USA": {
+        "gpsLang": "-80.19362",
+        "gpsLat": "25.7741728",
+        "_id": "zyhLM3wHJkF8pnue"
+    },
+    "Bossier City, Louisiana, USA": {
+        "gpsLang": "-93.6952689",
+        "gpsLat": "32.5369356",
+        "_id": "yZiMZdMWbskQcyrf"
+    },
+    "Tokyo, Japan": {
+        "gpsLang": "139.7594549",
+        "gpsLat": "35.6828387",
+        "_id": "JAht61g3J7qLClHR"
+    },
+    "Cedar Rapids, Iowa, USA": {
+        "gpsLang": "-91.6704053",
+        "gpsLat": "41.9758872",
+        "_id": "6CdW3PGnjLLPi0QQ"
+    },
+    "Lake Charles, Louisiana, USA": {
+        "gpsLang": "-93.2061609",
+        "gpsLat": "30.2072293",
+        "_id": "QfvpsawvdYxl0nU8"
+    },
+    "Chiba, Japan": {
+        "gpsLang": "140.2647303",
+        "gpsLat": "35.549399",
+        "_id": "s8SsQzhQqdtk9tVS"
+    },
+    "Birmingham, Alabama, USA": {
+        "gpsLang": "-86.8024326",
+        "gpsLat": "33.5206824",
+        "_id": "aRRojWAIErOHxpvo"
+    },
+    "Bay St. Louis, Mississippi, USA": {
+        "gpsLang": "-89.3343223",
+        "gpsLat": "30.3132453",
+        "_id": "shu6I8nYyZE7nTCN"
+    },
+    "Mobile, Alabama, USA": {
+        "gpsLang": "-88.0848929",
+        "gpsLat": "30.6867339",
+        "_id": "0tirbCZpc8nChjvS"
+    },
+    "Yokohama, Kanagawa, Japan": {
+        "gpsLang": "139.636768",
+        "gpsLat": "35.444991",
+        "_id": "8JVo1vjEpsHMzJfL"
+    },
+    "Augusta, Georgia, USA": {
+        "gpsLang": "-81.9748429",
+        "gpsLat": "33.4709714",
+        "_id": "Iej5614aVuV7xXiI"
+    },
+    "Dothan, Alabama, USA": {
+        "gpsLang": "-85.3933906",
+        "gpsLat": "31.2237434",
+        "_id": "euh5V2uhvsHHCwKG"
+    },
+    "San Juan, Puerto Rico": {
+        "gpsLang": "-66.116666",
+        "gpsLat": "18.465299",
+        "_id": "6YVf8Ry6Yn6k1Teq"
+    },
+    "Casper, Wyoming, USA": {
+        "gpsLang": "-106.325138",
+        "gpsLat": "42.8501191",
+        "_id": "QdLfv1uYMrRFlD4I"
+    }
+}
