@@ -12,14 +12,12 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function Home() {
   const ufcData = useSelector((globalState) => globalState.ufcReducer.ufcData);
-  console.log(ufcData);
   // console.log(d3.group(ufcData.data.data, el=>el.location))
   const weightClass = d3.rollup(
     ufcData.data,
     (g) => g.length,
     (d) => d.weight_class
   );
-  console.log(Array.from(weightClass.keys()).sort());
   const weightClassData = {
     labels: Array.from(weightClass.keys()),
     datasets: [
@@ -51,7 +49,7 @@ export default function Home() {
     <Container>
       <Grid container spacing={5} style={{ padding: 4 }}>
         <Grid item xs={6}>
-          <div style={{ height: '400px', marginTop: 2 }}>
+          <div>
             <MapContainer
               style={{ height: '400px', marginTop: 2 }}
               center={[51.505, -0.09]}

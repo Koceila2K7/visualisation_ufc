@@ -4,8 +4,8 @@ import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from '../components/NavBar';
-import Home from './Home';
-import Athletes from './Athletes';
+import Home from './sections/Home';
+import Athletes from './sections/Athletes';
 
 const lighTheme = createTheme({
   palette: {
