@@ -1,24 +1,25 @@
 import { Grid } from '@mui/material';
-import * as d3 from 'd3';
+// import * as d3 from 'd3';
 
 import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { Pie } from 'react-chartjs-2';
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { useSelector } from 'react-redux';
 import { Container } from '@mui/system';
+import Maps from '../../components/Maps';
+import LineChart from '../../components/LineChart';
+import NumberOfFights from '../../components/NumberOfFights';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function Home() {
   const ufcData = useSelector((globalState) => globalState.ufcReducer.ufcData);
   // console.log(d3.group(ufcData.data.data, el=>el.location))
-  const weightClass = d3.rollup(
+  /* const weightClass = d3.rollup(
     ufcData.data,
     (g) => g.length,
     (d) => d.weight_class
   );
-  const weightClassData = {
+   const weightClassData = {
     labels: Array.from(weightClass.keys()),
     datasets: [
       {
@@ -44,32 +45,23 @@ export default function Home() {
       },
     ],
   };
+  */
 
   return (
     <Container>
-      <Grid container spacing={5} style={{ padding: 4 }}>
-        <Grid item xs={6}>
-          <div>
-            <MapContainer
-              style={{ height: '400px', marginTop: 2 }}
-              center={[51.505, -0.09]}
-              zoom={13}
-              scrollWheelZoom
-            >
-              <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-              <Marker position={[51.505, -0.09]}>
-                <Popup>
-                  A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-              </Marker>
-            </MapContainer>
-          </div>
+      <Grid container spacing={5} style={{ padding: 4, marginTop: 2 }}>
+        <Grid xs={12}>
+          <h4>Nombre de matches : </h4>
+          <h3>{ufcData.data.length}</h3>
         </Grid>
         <Grid item xs={6}>
-          <Pie data={weightClassData} />
+          <Maps />
+        </Grid>
+        <Grid item xs={6}>
+          <LineChart />
+        </Grid>
+        <Grid item xs={6}>
+          <NumberOfFights />
         </Grid>
       </Grid>
     </Container>

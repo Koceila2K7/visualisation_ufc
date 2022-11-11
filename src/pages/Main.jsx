@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Home from './sections/Home';
 import Athletes from './sections/Athletes';
+import Comparer from './sections/Comparer';
 
 const lighTheme = createTheme({
   palette: {
@@ -35,6 +36,7 @@ export default function Main() {
         <NavBar toggleTheme={toggleTheme} themeState={themeDark} />
         <Routes>
           <Route path="/athletes" element={<Athletes />} />
+          <Route path="/comparer" element={<Comparer />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </BrowserRouter>
