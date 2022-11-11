@@ -33,9 +33,7 @@ const options = {
 };
 
 export default function LineChart() {
-  const ufcData = useSelector(
-    (globalState) => globalState.ufcReducer.ufcData.data
-  );
+  const ufcData = useSelector((globalState) => globalState.ufcReducer.ufcData);
   const dateMatches = d3.rollup(
     ufcData.map((e) => {
       const [day, month, year] = e.date.split('-');

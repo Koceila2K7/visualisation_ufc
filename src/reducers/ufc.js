@@ -2,12 +2,12 @@ import { UFC_FILTER_DATA } from '../constants';
 import ufcData from '../data/data.json';
 import location from '../data/locations.json';
 
-const DATA = { ufcData, location, ufcDataHome: ufcData };
+const DATA = { ufcData: ufcData.data, location };
 
 export default function reducer(data = DATA, { type, payload }) {
   switch (type) {
     case UFC_FILTER_DATA: {
-      let newData = { ...ufcData };
+      let newData = [...ufcData.data];
 
       const {
         location: locationFilter,
@@ -33,7 +33,7 @@ export default function reducer(data = DATA, { type, payload }) {
           return y === year && m === month;
         });
       }
-      return newData;
+      return { ufcData: newData, location };
     }
     default:
       return data;

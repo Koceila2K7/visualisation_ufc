@@ -41,9 +41,7 @@ const options = {
 };
 
 export default function NumberOfFights() {
-  const ufcData = useSelector(
-    (globalState) => globalState.ufcReducer.ufcData.data
-  );
+  const ufcData = useSelector((globalState) => globalState.ufcReducer.ufcData);
   const bFighters = d3.rollup(
     ufcData,
     (g) => g.length,
