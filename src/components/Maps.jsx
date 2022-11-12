@@ -13,7 +13,7 @@ import { UFC_DATA_FILTER_LOCATION } from '../constants';
 function MyComponent({ disableFilter }) {
   // eslint-disable-next-line no-unused-vars
   const map = useMapEvents({
-    dblclick: () => {
+    click: () => {
       disableFilter();
     },
   });
