@@ -71,8 +71,3 @@ export default function Maps() {
     </MapContainer>
   );
 }
-/** {Array.from(locationMatches.entries()).map((l, v) => (
-        <Marker position={location[l]}>
-          <Popup>{v}</Popup>
-        </Marker>
-      ))} */
