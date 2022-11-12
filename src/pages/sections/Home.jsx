@@ -44,7 +44,17 @@ export default function Home() {
         >
           <LineChart />
         </Grid>
-        <Grid item xs={6}>
+        <Grid
+          item
+          xs={12}
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignContent: 'center',
+            justifyItems: 'center',
+            alignItems: 'center',
+          }}
+        >
           <NumberOfFights />
         </Grid>
       </Grid>
