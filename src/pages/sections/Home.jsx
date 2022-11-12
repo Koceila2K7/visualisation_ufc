@@ -9,8 +9,6 @@ import Maps from '../../components/Maps';
 import { UFC_FILTER_DATA } from '../../constants';
 import LineChart from '../../components/LineChart';
 import NumberOfFights from '../../components/NumberOfFights';
-// import LineChart from '../../components/LineChart';
-// import NumberOfFights from '../../components/NumberOfFights';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -18,13 +16,15 @@ export default function Home() {
   const ufcData = useSelector((globalState) => globalState.ufcReducer.ufcData);
   const dispatch = useDispatch();
   const dataFilter = useSelector((globalState) => globalState.ufcHomeFilter);
+
   useEffect(() => {
     dispatch({ type: UFC_FILTER_DATA, payload: dataFilter });
   }, [dataFilter]);
+
   return (
     <Container>
       <Grid container spacing={5} style={{ padding: 4, marginTop: 2 }}>
-        <Grid xs={12}>
+        <Grid item xs={12}>
           <h4>Nombre de matches : </h4>
           <h3>{ufcData.length}</h3>
         </Grid>

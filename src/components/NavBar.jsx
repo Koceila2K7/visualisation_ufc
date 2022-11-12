@@ -41,8 +41,6 @@ function NavBar({ toggleTheme, themeState }) {
             <Typography
               variant="h6"
               noWrap
-              component="a"
-              href="/"
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
@@ -86,7 +84,7 @@ function NavBar({ toggleTheme, themeState }) {
               }}
             >
               {pages.map((page) => (
-                <Link to={`/${page}`}>
+                <Link to={`/${page}`} key={page}>
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
@@ -114,7 +112,7 @@ function NavBar({ toggleTheme, themeState }) {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Link to={`/${page}`}>
+              <Link to={`/${page}`} key={page}>
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}

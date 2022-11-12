@@ -9,8 +9,9 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import * as d3 from 'd3';
+import { UFC_DATA_FILTER_FIGHTER } from '../constants';
 
 ChartJS.register(
   CategoryScale,
@@ -74,12 +75,21 @@ export default function NumberOfFights() {
     // eslint-disable-next-line no-nested-ternary
     .sort((a, b) => (a[1] < b[1] ? 1 : a[1] === b[1] ? 0 : -1))
     .slice(0, 20);
-
+  const dispatch = useDispatch();
   return (
     <Bar
-      options={options}
+      options={{
+        ...options,
+
+        onClick: (_, element) =>
+          dispatch({
+            type: UFC_DATA_FILTER_FIGHTER,
+            payload: element.length === 0 ? null : data[element[0].index][0],
+          }),
+      }}
       data={{
         labels: data.map((e) => e[0]),
+
         datasets: [
           {
             label: 'Nombre de combats',
