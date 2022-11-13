@@ -28,12 +28,13 @@ export default function Home() {
           <h4>Nombre de matches : </h4>
           <h3>{ufcData.length}</h3>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6}>
           <Maps />
         </Grid>
         <Grid
           item
-          xs={6}
+          xs={12}
+          md={6}
           style={{
             display: 'flex',
             justifyContent: 'center',

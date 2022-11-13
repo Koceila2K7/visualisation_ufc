@@ -3,6 +3,7 @@ import { Grid, Typography } from '@mui/material';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { getWinsAndLosses } from '../utils';
+import RepartitionDesCoups from './RepartitionDesCoups';
 
 function Card({ title, value }) {
   return (
@@ -48,6 +49,9 @@ export default function FighterStats() {
         title="  Nombre de victoire par sumission"
         value={fighterStat.win_by_Submission}
       />
+      <Grid item xs={6}>
+        <RepartitionDesCoups />
+      </Grid>
     </Grid>
   );
 }
