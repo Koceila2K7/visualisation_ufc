@@ -1,15 +1,41 @@
-import React from 'react';
+/* eslint-disable no-nested-ternary */
+import React, { useState } from 'react';
 import {
   Circle,
   MapContainer,
   Popup,
   TileLayer,
   useMapEvents,
+  GeoJSON,
 } from 'react-leaflet';
 import { useDispatch, useSelector } from 'react-redux';
 import * as d3 from 'd3';
-import { UFC_DATA_FILTER_LOCATION } from '../constants';
+import mapData from '../data/contries.geo.json';
+import { UFC_DATA_FILTER_LOCATION, UFC_DATA_FILTER_PAYS } from '../constants';
 
+function getcolorFunction(d) {
+  return d > 1000
+    ? '#800026'
+    : d > 500
+    ? '#BD0026'
+    : d > 200
+    ? '#E31A1C'
+    : d > 100
+    ? '#FC4E2A'
+    : d > 50
+    ? '#FD8D3C'
+    : d > 20
+    ? '#FEB24C'
+    : d > 10
+    ? '#FED976'
+    : '#FFEDA0';
+}
+
+const countryStyle = {
+  fillOpacity: 0.8,
+  color: 'black',
+  weight: 1,
+};
 function MyComponent({ disableFilter }) {
   // eslint-disable-next-line no-unused-vars
   const map = useMapEvents({
@@ -19,33 +45,56 @@ function MyComponent({ disableFilter }) {
   });
   return null;
 }
-export default function Maps() {
-  const ufcData = useSelector((globalState) => globalState.ufcReducer.ufcData);
+function InnerMap({
+  contriesMatches,
+  handleLocationFilter,
+  location,
+  locationMatches,
+  handlePaysFilter,
+}) {
+  const onEachCountry = (country, layer) => {
+    const countryName = country.properties.admin.toLowerCase();
 
-  const dispatch = useDispatch();
-  const handleLocationFilter = (payload) => (event) => {
-    event?.originalEvent.view.L.DomEvent.stopPropagation(event);
-    dispatch({ type: UFC_DATA_FILTER_LOCATION, payload });
+    console.log({
+      countryName,
+      value: contriesMatches.get(countryName),
+    });
+
+    // eslint-disable-next-line no-param-reassign
+    layer.options.fillColor = getcolorFunction(
+      contriesMatches.get(countryName)
+    ); // 0-1 (0.1, 0.2, 0.3)
+    // eslint-disable-next-line no-param-reassign
+    layer.options.fillOpacity = 0.8;
+    layer.on({
+      click: handlePaysFilter(countryName),
+    });
   };
 
-  const location = useSelector(
-    (globalState) => globalState.ufcReducer.location
-  );
-  const locationMatches = d3.rollup(
-    ufcData,
-    (g) => g.length,
-    (d) => d.location
-  );
+  const [zoom, setZoomLevel] = useState(5);
+  const mapEvents = useMapEvents({
+    zoomend: () => {
+      setZoomLevel(mapEvents.getZoom());
+    },
+  });
 
-  return (
-    <MapContainer
-      style={{ height: '400px' }}
-      center={[51.505, -0.09]}
-      zoom={5}
-      scrollWheelZoom
-      tap={handleLocationFilter(null)}
-    >
-      <MyComponent disableFilter={handleLocationFilter(null)} />
+  const disableFilter = () => {
+    const a = handleLocationFilter(null);
+    const b = handlePaysFilter(null);
+    return () => {
+      a();
+      b();
+    };
+  };
+  return zoom < 5 ? (
+    <GeoJSON
+      style={{ ...countryStyle }}
+      data={mapData.features}
+      onEachFeature={onEachCountry}
+    />
+  ) : (
+    <>
+      <MyComponent disableFilter={disableFilter()} />
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -56,7 +105,7 @@ export default function Maps() {
         return (
           <Circle
             key={l}
-            radius={v < 1000 ? v * 300 : v * 100}
+            radius={v < 300 ? v * 1000 : v * 100}
             color="red"
             fillColor="#f03"
             center={[gpsLat, gpsLang]}
@@ -68,6 +117,54 @@ export default function Maps() {
           </Circle>
         );
       })}
+    </>
+  );
+}
+
+export default function Maps() {
+  const ufcData = useSelector((globalState) => globalState.ufcReducer.ufcData);
+
+  const dispatch = useDispatch();
+  const handleLocationFilter = (payload) => (event) => {
+    event?.originalEvent.view.L.DomEvent.stopPropagation(event);
+    dispatch({ type: UFC_DATA_FILTER_LOCATION, payload });
+  };
+  const handlePaysFilter = (payload) => (event) => {
+    alert(payload);
+    event?.originalEvent.view.L.DomEvent.stopPropagation(event);
+    dispatch({ type: UFC_DATA_FILTER_PAYS, payload });
+  };
+
+  const location = useSelector(
+    (globalState) => globalState.ufcReducer.location
+  );
+  const locationMatches = d3.rollup(
+    ufcData,
+    (g) => g.length,
+    (d) => d.location
+  );
+
+  const contriesMatches = d3.rollup(
+    ufcData,
+    (g) => g.length,
+    (d) => d.pays
+  );
+
+  return (
+    <MapContainer
+      style={{ height: '400px' }}
+      center={[51.505, -0.09]}
+      zoom={5}
+      scrollWheelZoom
+      tap={handleLocationFilter(null)}
+    >
+      <InnerMap
+        handleLocationFilter={handleLocationFilter}
+        contriesMatches={contriesMatches}
+        location={location}
+        handlePaysFilter={handlePaysFilter}
+        locationMatches={locationMatches}
+      />
     </MapContainer>
   );
 }

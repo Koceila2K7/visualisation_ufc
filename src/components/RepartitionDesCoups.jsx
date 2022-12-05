@@ -1,9 +1,50 @@
+import { Typography } from '@mui/material';
 import React from 'react';
 
-export default function RepartitionDesCoups() {
+const LEVELS_COLOR = [1, 0.5, 0.3];
+export default function RepartitionDesCoups({ stats, color = '#D20A0A' }) {
+  const { head, leg, body } = stats;
+  const total = head + leg + body;
+  // eslint-disable-next-line no-unused-vars
+  const sortedValue = [
+    { value: head, label: 'head' },
+    { value: body, label: 'body' },
+    { value: leg, label: 'leg' },
+  ]
+    .sort((a, b) => {
+      if (a.value === b.value) return 0;
+      return a.value < b.value ? 1 : -1;
+    })
+    .map(({ label }) => label);
+
+  console.log({ head, leg, body, total });
+
   return (
-    <div>
-      <div className="c-stat-body__diagram">
+    <div
+      style={{
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignContent: 'center',
+        flexDirection: 'column',
+        justifyItems: 'center',
+        alignItems: 'cente',
+        marginTop: 30,
+        marginBottom: 30,
+      }}
+    >
+      <div
+        style={{
+          flex: 1,
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignContent: 'center',
+          justifyItems: 'center',
+          alignItems: 'cente',
+        }}
+        className="c-stat-body__diagram"
+      >
         <svg
           className="c-stat-body__svg"
           version="1.1"
@@ -57,18 +98,18 @@ export default function RepartitionDesCoups() {
             <text
               id="e-stat-body_x5F__x5F_head_percent"
               transform="matrix(1 0 0 1 230.8119 32)"
-              fill="#D20A0A"
+              fill={color}
               fontSize="14px"
             >
-              65%
+              {Math.round((head / total) * 100, 10)}%
             </text>
             <text
               id="e-stat-body_x5F__x5F_head_value"
               transform="matrix(1 0 0 1 197.8119 32)"
-              fill="#D20A0A"
+              fill={color}
               fontSize="14px"
             >
-              324
+              {Math.round(head, 10)}
             </text>
             <text
               transform="matrix(1 0 0 1 3.8119 33)"
@@ -83,18 +124,18 @@ export default function RepartitionDesCoups() {
             <text
               id="e-stat-body_x5F__x5F_body_percent"
               transform="matrix(1 0 0 1 226.8119 90)"
-              fill="#D20A0A"
+              fill={color}
               fontSize="14px"
             >
-              26%
+              {Math.round((body / total) * 100, 10)}%
             </text>
             <text
               id="e-stat-body_x5F__x5F_body_value"
               transform="matrix(1 0 0 1 197.8119 90)"
-              fill="#D20A0A"
+              fill={color}
               fontSize="14px"
             >
-              128{' '}
+              {Math.round(body, 10)}{' '}
             </text>
             <text
               transform="matrix(1 0 0 1 4.8119 91)"
@@ -109,18 +150,18 @@ export default function RepartitionDesCoups() {
             <text
               id="e-stat-body_x5F__x5F_leg_percent"
               transform="matrix(1 0 0 1 226.8119 145)"
-              fill="#D20A0A"
+              fill={color}
               fontSize="14px"
             >
-              9%
+              {Math.round((leg / total) * 100, 10)}%
             </text>
             <text
               id="e-stat-body_x5F__x5F_leg_value"
               transform="matrix(1 0 0 1 197.8119 145)"
-              fill="#D20A0A"
+              fill={color}
               fontSize="14px"
             >
-              45
+              {Math.round(leg, 10)}
             </text>
             <text
               transform="matrix(1 0 0 1 8.8119 146)"
@@ -174,8 +215,8 @@ export default function RepartitionDesCoups() {
           </g>
           <path
             id="e-stat-body_x5F__x5F_head"
-            opacity="1"
-            fill="#D20A0A"
+            opacity={LEVELS_COLOR[sortedValue.indexOf('head')]}
+            fill={color}
             d="M134.63,24.95
         c-0.63-1.46-0.61-2.87-0.8-4.29c-0.49-3.61-3.46-6.44-6.92-7.32c0-0.18,0-0.28,0-0.28c-0.66-0.08-1.33-0.07-1.99,0
         c-0.4-0.01-0.8,0.01-1.2,0.05c0,0,0,0.06,0,0.17c-3.46,0.87-6.43,3.7-6.92,7.32c-0.19,1.43-0.17,2.84-0.8,4.29
@@ -186,8 +227,8 @@ export default function RepartitionDesCoups() {
 
           <path
             id="e-stat-body_x5F__x5F_body"
-            opacity="0.45555555555556"
-            fill="#D20A0A"
+            opacity={LEVELS_COLOR[sortedValue.indexOf('body')]}
+            fill={color}
             d="M108.18,43.7
         c-3.41,0.9-5.51,2.66-6.33,5.96c-0.25,0.99-0.45,1.98-0.56,3c-0.3,2.86-0.38,5.74-0.89,8.59c-1.12,6.21-3,12.23-4.53,18.33
         c-1.92,7.64-1.97,15.46-1.9,23.28c0.03,2.69-0.23,5.33-1.16,7.89v1.44c0.69,2.39,1.75,4.49,4.47,5.25c1.14,0.32,2.23,0.25,3.08-0.63
@@ -207,8 +248,8 @@ export default function RepartitionDesCoups() {
           />
           <g id="e-stat-body_x5F__x5F_leg">
             <path
-              opacity="0.225"
-              fill="#D20A0A"
+              opacity={LEVELS_COLOR[sortedValue.indexOf('leg')]}
+              fill={color}
               d="M144.56,119.75H127.7c0.01,0.05,0.03,0.1,0.04,0.15
             c1.23,5.2,2.24,10.45,3.24,15.69c0.78,4.08,1.88,8.05,3.6,11.87c1.41,3.14,2.4,6.37,2.41,9.9c0.02,4.53,1.57,8.84,2.59,13.21
             c0.45,1.93,0.92,3.85,1.2,5.82c0.31,2.2,0.63,4.38-0.29,6.55c-0.43,1.01-0.31,2.14-0.12,3.2c0.21,1.19,0.25,2.38,0.16,3.58
@@ -218,8 +259,8 @@ export default function RepartitionDesCoups() {
             c0.06-0.84-0.07-1.71-0.42-2.47c-1.72-3.8-1.07-7.72-0.83-11.66C144.32,126.27,144.59,123.01,144.56,119.75z"
             />
             <path
-              opacity="0.225"
-              fill="#D20A0A"
+              opacity={LEVELS_COLOR[sortedValue.indexOf('leg')]}
+              fill={color}
               d="M100.23,192.05c0.92,0.35,1.92,0.37,2.88,0.57
             c1.26,0.25,2.58-0.34,3.78,0.33H108c1.86-0.75,2.25-1.31,2.09-3.27c-0.09-1.21-0.05-2.39,0.16-3.58c0.19-1.07,0.31-2.2-0.12-3.2
             c-0.92-2.17-0.6-4.36-0.29-6.55c0.28-1.96,0.75-3.89,1.2-5.82c1.02-4.38,2.57-8.68,2.59-13.21c0.01-3.52,1-6.76,2.41-9.9
@@ -230,6 +271,19 @@ export default function RepartitionDesCoups() {
             />
           </g>
         </svg>
+      </div>
+      <div
+        style={{
+          flex: 1,
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignContent: 'center',
+          justifyItems: 'center',
+          alignItems: 'cente',
+        }}
+      >
+        <Typography variant="h6">Répartition des coups donnés</Typography>
       </div>
     </div>
   );

@@ -1,10 +1,15 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable camelcase */
 import { Grid, Typography } from '@mui/material';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { getWinsAndLosses } from '../utils';
+import { getFighterStats, getWinsAndLosses } from '../utils';
+import RadarStats from './RadarStats';
 import RepartitionDesCoups from './RepartitionDesCoups';
+import StrikingStats from './StrikingStats';
+import VictoireBar from './VictoireBar';
 
+// eslint-disable-next-line no-unused-vars
 function Card({ title, value }) {
   return (
     <Grid
@@ -25,32 +30,56 @@ function Card({ title, value }) {
   );
 }
 
-export default function FighterStats() {
+export default function FighterStats({
+  fighterB,
+  fighterR,
+  fighterNameR,
+  fighterNameB,
+}) {
+  // eslint-disable-next-line no-unused-vars
   const ufcData = useSelector((globalState) => globalState.ufcReducer.ufcData);
 
-  const fighterName = useSelector(
-    (globalState) => globalState.ufcHomeFilter.fighter
-  );
-  const fighterStat = getWinsAndLosses(ufcData, fighterName);
+  const fighterStatR = getWinsAndLosses(fighterR, fighterNameR);
+  const statsR = getFighterStats(fighterR, fighterNameR);
+
+  const fighterStatB = getWinsAndLosses(fighterB, fighterNameB);
+  const statsB = getFighterStats(fighterB, fighterNameB);
+
   return (
     <Grid container>
-      <Card title="Nombre de matchs" value={ufcData.length} />
-
-      <Card title="Nombre de pertes" value={fighterStat.losses} />
-
-      <Card title="Nombre de victoire" value={fighterStat.wins} />
-
-      <Card
-        title="Nombre de victoire par KO "
-        value={fighterStat.win_by_KO_TKO}
-      />
-
-      <Card
-        title="  Nombre de victoire par sumission"
-        value={fighterStat.win_by_Submission}
-      />
       <Grid item xs={6}>
-        <RepartitionDesCoups />
+        <VictoireBar
+          pertes={fighterStatR.losses}
+          victoire={fighterStatR.wins}
+        />
+      </Grid>
+      <Grid item xs={6}>
+        <VictoireBar
+          pertes={fighterStatB.losses}
+          victoire={fighterStatB.wins}
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <RadarStats
+          statsR={statsR}
+          statsB={statsB}
+          fighterNameB="combatant de Droite"
+          fighterNameR="combatant de Gauche"
+        />
+      </Grid>
+      <Grid item xs={6} style={{ padding: 60, paddingTop: 2 }}>
+        <RepartitionDesCoups stats={statsR} />
+      </Grid>
+
+      <Grid item xs={6} style={{ padding: 60, paddingTop: 2 }}>
+        <RepartitionDesCoups stats={statsB} color="#9395c4" />
+      </Grid>
+
+      <Grid item xs={6}>
+        <StrikingStats {...statsR} />
+      </Grid>
+      <Grid item xs={6}>
+        <StrikingStats {...statsB} />
       </Grid>
     </Grid>
   );

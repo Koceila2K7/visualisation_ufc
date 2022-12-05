@@ -3,8 +3,7 @@ import React, { useCallback } from 'react';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete';
-import { useDispatch, useSelector } from 'react-redux';
-import { UFC_DATA_FILTER_FIGHTER } from '../constants';
+import { useSelector } from 'react-redux';
 
 function RenderInput(params) {
   return (
@@ -21,17 +20,13 @@ function RenderInput(params) {
   );
 }
 
-export default function SearchField() {
+export default function SearchField({ onChange, value }) {
   const allAthletsNames = useSelector(
     (globalState) => globalState.ufcReducer.allAthletsNames
   );
-  const dispatch = useDispatch();
   const handleClick = useCallback(
-    (event) =>
-      dispatch({
-        type: UFC_DATA_FILTER_FIGHTER,
-        payload: event.target.innerText,
-      }),
+    (event) => onChange(event.target.innerText),
+
     []
   );
   return (
@@ -43,6 +38,7 @@ export default function SearchField() {
         onChange={handleClick}
         options={allAthletsNames}
         renderInput={RenderInput}
+        value={value}
       />
     </Stack>
   );

@@ -77,28 +77,35 @@ export default function NumberOfFights() {
     .slice(0, 20);
   const dispatch = useDispatch();
   return (
-    <Bar
-      options={{
-        ...options,
-
-        onClick: (_, element) =>
-          dispatch({
-            type: UFC_DATA_FILTER_FIGHTER,
-            payload: element.length === 0 ? null : data[element[0].index][0],
-          }),
+    <div
+      style={{
+        width: '100%',
+        height: '100%',
       }}
-      data={{
-        labels: data.map((e) => e[0]),
+    >
+      <Bar
+        options={{
+          ...options,
 
-        datasets: [
-          {
-            label: 'Nombre de combats',
-            data: data.map((e) => e[1]),
-            borderColor: 'rgb(255, 99, 132)',
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
-          },
-        ],
-      }}
-    />
+          onClick: (_, element) =>
+            dispatch({
+              type: UFC_DATA_FILTER_FIGHTER,
+              payload: element.length === 0 ? null : data[element[0].index][0],
+            }),
+        }}
+        data={{
+          labels: data.map((e) => e[0]),
+
+          datasets: [
+            {
+              label: 'Nombre de combats',
+              data: data.map((e) => e[1]),
+              borderColor: 'rgb(255, 99, 132)',
+              backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            },
+          ],
+        }}
+      />
+    </div>
   );
 }
