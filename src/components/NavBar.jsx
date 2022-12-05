@@ -12,12 +12,12 @@ import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
 import ufcLogo from '../assets/ufc_logo.png';
 import ufclogoblack from '../assets/ufclogoblack.png';
-import Switch from './Switch';
+// import Switch from './Switch';
 import '../styles/NavBar.css';
 
-const pages = ['Home', 'athletes', 'Comparer'];
+const pages = ['Home', 'Comparer'];
 
-function NavBar({ toggleTheme, themeState }) {
+function NavBar({ themeState }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -29,14 +29,14 @@ function NavBar({ toggleTheme, themeState }) {
   };
 
   return (
-    <AppBar position="fixed">
+    <AppBar
+      elevation={1}
+      position="fixed"
+      style={{ maxHeight: 60, backgroundColor: 'black' }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img
-            src={themeState ? ufcLogo : ufclogoblack}
-            alt="ufc"
-            width={100}
-          />
+          <img src={themeState ? ufcLogo : ufclogoblack} alt="ufc" width={80} />
           <Link to="/">
             <Typography
               variant="h6"
@@ -122,10 +122,6 @@ function NavBar({ toggleTheme, themeState }) {
                 </Button>
               </Link>
             ))}
-          </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Switch toggle={toggleTheme} />
           </Box>
         </Toolbar>
       </Container>

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Grid, IconButton } from '@mui/material';
 // import * as d3 from 'd3';
 
@@ -23,16 +24,9 @@ export default function Home() {
 
   return (
     <Container>
-      <Grid container spacing={5} style={{ padding: 4, marginTop: 2 }}>
-        <Grid item xs={6}>
-          <h4>Nombre de matches : </h4>
-          <h3>{ufcData.length}</h3>
-        </Grid>
-        <Grid item xs={6}>
-          <h4>{'   '}</h4>
-          <IconButton aria-label="delete" size="small">
-            <DashboardIcon />
-          </IconButton>
+      <Grid container spacing={5} style={{ padding: 4, marginTop: 20 }}>
+        <Grid item xs={12} md={12}>
+          <Maps />
         </Grid>
         <Grid
           item
@@ -60,9 +54,6 @@ export default function Home() {
           }}
         >
           <NumberOfFights />
-        </Grid>
-        <Grid item xs={12} md={12}>
-          <Maps />
         </Grid>
       </Grid>
     </Container>

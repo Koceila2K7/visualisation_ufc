@@ -47,39 +47,44 @@ export default function FighterStats({
 
   return (
     <Grid container>
-      <Grid item xs={6}>
-        <VictoireBar
-          pertes={fighterStatR.losses}
-          victoire={fighterStatR.wins}
-        />
-      </Grid>
-      <Grid item xs={6}>
-        <VictoireBar
-          pertes={fighterStatB.losses}
-          victoire={fighterStatB.wins}
-        />
-      </Grid>
-      <Grid item xs={12}>
-        <RadarStats
-          statsR={statsR}
-          statsB={statsB}
-          fighterNameB="combatant de Droite"
-          fighterNameR="combatant de Gauche"
-        />
-      </Grid>
-      <Grid item xs={6} style={{ padding: 60, paddingTop: 2 }}>
+      <Grid item xs={4} style={{ padding: 60, paddingTop: 2 }}>
         <RepartitionDesCoups stats={statsR} />
       </Grid>
 
-      <Grid item xs={6} style={{ padding: 60, paddingTop: 2 }}>
-        <RepartitionDesCoups stats={statsB} color="#9395c4" />
+      <Grid
+        item
+        xs={4}
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <VictoireBar
+          labels={[fighterNameR, fighterNameB]}
+          pertes={[fighterStatR.losses, fighterStatB.losses]}
+          victoire={[fighterStatR.wins, fighterStatB.wins]}
+        />
       </Grid>
 
-      <Grid item xs={6}>
-        <StrikingStats {...statsR} />
+      <Grid item xs={4} style={{ padding: 60, paddingTop: 2 }}>
+        <RepartitionDesCoups stats={statsB} color="rgb(59,  78, 196)" />
+      </Grid>
+
+      <Grid item xs={3}>
+        <StrikingStats {...statsR} name={fighterNameR} />
       </Grid>
       <Grid item xs={6}>
-        <StrikingStats {...statsB} />
+        <RadarStats
+          statsR={statsR}
+          statsB={statsB}
+          fighterNameB={fighterNameB}
+          fighterNameR={fighterNameR}
+        />
+      </Grid>
+
+      <Grid item xs={3}>
+        <StrikingStats {...statsB} name={fighterNameB} />
       </Grid>
     </Grid>
   );

@@ -61,23 +61,54 @@ export default function Athletes() {
   }, [dataFilter]);
 
   return (
-    <Container style={{ padding: 4, marginTop: 100 }}>
+    <Container style={{ padding: 4, marginTop: 70 }}>
       <Grid container>
-        <Grid item xs={6} style={{ display: 'flex', justifyContent: 'center' }}>
+        <Grid
+          item
+          xs={6}
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: '#D20A0A',
+              width: '50px',
+              height: '30px',
+            }}
+          />
           <SearchField
             onChange={setFighterR}
             value={selectedFighters.fighterR}
           />
         </Grid>
-        <Grid item xs={6} style={{ display: 'flex', justifyContent: 'center' }}>
+        <Grid
+          item
+          xs={6}
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
           <SearchField
             onChange={setFighterB}
             value={selectedFighters.fighterB}
           />
+
+          <div
+            style={{
+              backgroundColor: 'rgba(59,  78, 196,1)',
+              width: '50px',
+              height: '30px',
+            }}
+          />
         </Grid>
         <Grid item xs={12}>
           <FighterStats
-            fighterNameR={selectedFighters.fighterB}
+            fighterNameR={selectedFighters.fighterR}
             fighterNameB={selectedFighters.fighterB}
             fighterB={matchs.fighterB}
             fighterR={matchs.fighterR}

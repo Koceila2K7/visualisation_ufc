@@ -137,8 +137,8 @@ export default function LineChart() {
                     ? `Nombre de matchs par mois pour l'année ${year}`
                     : `Nombre de matchs par jours, ${months[month]}  ${year} `,
                 data: Array.from(dateMatches.values()),
-                borderColor: 'rgb(53, 162, 235)',
-                backgroundColor: 'rgba(53, 162, 235, 0.5)',
+                borderColor: '#D20A0A',
+                backgroundColor: '#D20A0A',
                 hidden: false,
               },
             ],

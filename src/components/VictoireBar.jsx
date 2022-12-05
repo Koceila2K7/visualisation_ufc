@@ -32,23 +32,21 @@ export const options = {
   },
 };
 
-const labels = ['Répartition des Matchs'];
-
-export default function VictoireBar({ pertes, victoire }) {
+export default function VictoireBar({ pertes, victoire, labels }) {
   const data = {
     labels,
     datasets: [
       {
         label: 'Victoire',
-        data: [victoire],
+        data: victoire,
         backgroundColor: 'rgba(59,  78, 196, .9)',
       },
       {
         label: 'Pertes',
-        data: [pertes],
+        data: pertes,
         backgroundColor: 'rgba(210, 10, 10, 1)',
       },
     ],
   };
-  return <Bar options={options} data={data} style={{ maxHeight: 400 }} />;
+  return <Bar options={options} data={data} />;
 }

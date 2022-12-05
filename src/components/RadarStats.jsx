@@ -28,12 +28,12 @@ export default function RadarStats({
 }) {
   const data = {
     labels: [
-      'PRES Head',
-      'PRES Leg',
-      'PRES Body',
-      'PRES Clinch',
-      'PRES Ground',
-      'PRES Standing',
+      'Précision',
+      'Défence',
+      'Absorption de coups',
+      'Contrôle',
+      'Réflexe',
+      'Force',
     ],
     datasets: [
       {
@@ -46,8 +46,8 @@ export default function RadarStats({
           statsB.ground,
           statsB.standing,
         ],
-        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        borderColor: 'rgba(255, 99, 132, 1)',
+        backgroundColor: 'rgba(210, 10, 10, .3)',
+        borderColor: 'rgba(210, 10, 10, 1)',
         borderWidth: 1,
       },
       {
@@ -60,8 +60,8 @@ export default function RadarStats({
           statsR.ground,
           statsR.standing,
         ],
-        backgroundColor: '#9395c480',
-        borderColor: '#9395c4',
+        backgroundColor: 'rgba(59,  78, 196, .3)',
+        borderColor: 'rgba(59,  78, 196, 1)',
         borderWidth: 1,
       },
     ],

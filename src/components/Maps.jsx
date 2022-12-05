@@ -13,6 +13,10 @@ import * as d3 from 'd3';
 import mapData from '../data/contries.geo.json';
 import { UFC_DATA_FILTER_LOCATION, UFC_DATA_FILTER_PAYS } from '../constants';
 
+function getKey() {
+  return `${new Date().getSeconds()} - ${Math.random() * 10000} `;
+}
+
 function getcolorFunction(d) {
   return d > 1000
     ? '#800026'
@@ -28,13 +32,15 @@ function getcolorFunction(d) {
     ? '#FEB24C'
     : d > 10
     ? '#FED976'
-    : '#FFEDA0';
+    : d > 10
+    ? '#FFEDA0'
+    : '#FFFFFF00';
 }
 
 const countryStyle = {
   fillOpacity: 0.8,
   color: 'black',
-  weight: 1,
+  weight: 0.8,
 };
 function MyComponent({ disableFilter }) {
   // eslint-disable-next-line no-unused-vars
@@ -53,12 +59,7 @@ function InnerMap({
   handlePaysFilter,
 }) {
   const onEachCountry = (country, layer) => {
-    const countryName = country.properties.admin.toLowerCase();
-
-    console.log({
-      countryName,
-      value: contriesMatches.get(countryName),
-    });
+    const countryName = country.properties?.admin?.toLowerCase();
 
     // eslint-disable-next-line no-param-reassign
     layer.options.fillColor = getcolorFunction(
@@ -72,6 +73,7 @@ function InnerMap({
   };
 
   const [zoom, setZoomLevel] = useState(5);
+
   const mapEvents = useMapEvents({
     zoomend: () => {
       setZoomLevel(mapEvents.getZoom());
@@ -86,12 +88,21 @@ function InnerMap({
       b();
     };
   };
-  return zoom < 5 ? (
-    <GeoJSON
-      style={{ ...countryStyle }}
-      data={mapData.features}
-      onEachFeature={onEachCountry}
-    />
+
+  return zoom < 4 ? (
+    <>
+      <MyComponent disableFilter={disableFilter()} />
+      <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      <GeoJSON
+        key={getKey()}
+        style={{ ...countryStyle }}
+        data={mapData.features}
+        onEachFeature={onEachCountry}
+      />
+    </>
   ) : (
     <>
       <MyComponent disableFilter={disableFilter()} />
@@ -130,7 +141,7 @@ export default function Maps() {
     dispatch({ type: UFC_DATA_FILTER_LOCATION, payload });
   };
   const handlePaysFilter = (payload) => (event) => {
-    alert(payload);
+    // console.log(payload);
     event?.originalEvent.view.L.DomEvent.stopPropagation(event);
     dispatch({ type: UFC_DATA_FILTER_PAYS, payload });
   };
@@ -164,6 +175,7 @@ export default function Maps() {
         location={location}
         handlePaysFilter={handlePaysFilter}
         locationMatches={locationMatches}
+        data={ufcData}
       />
     </MapContainer>
   );

@@ -32,11 +32,11 @@ const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: 'right',
+      position: 'bottom',
     },
     title: {
       display: true,
-      text: 'Les 20 premiers combatans',
+      text: 'Les 10 premiers combatans',
     },
   },
 };
@@ -74,7 +74,7 @@ export default function NumberOfFights() {
   data = data
     // eslint-disable-next-line no-nested-ternary
     .sort((a, b) => (a[1] < b[1] ? 1 : a[1] === b[1] ? 0 : -1))
-    .slice(0, 20);
+    .slice(0, 10);
   const dispatch = useDispatch();
   return (
     <div
@@ -100,8 +100,8 @@ export default function NumberOfFights() {
             {
               label: 'Nombre de combats',
               data: data.map((e) => e[1]),
-              borderColor: 'rgb(255, 99, 132)',
-              backgroundColor: 'rgba(255, 99, 132, 0.5)',
+              borderColor: 'rgba(59,  78, 196, .9)',
+              backgroundColor: 'rgba(59,  78, 196, .9)',
             },
           ],
         }}
