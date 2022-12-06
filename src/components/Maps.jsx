@@ -1,5 +1,5 @@
 /* eslint-disable no-nested-ternary */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Circle,
   MapContainer,
@@ -16,7 +16,17 @@ import { UFC_DATA_FILTER_LOCATION, UFC_DATA_FILTER_PAYS } from '../constants';
 function getKey() {
   return `${new Date().getSeconds()} - ${Math.random() * 10000} `;
 }
-
+const labels = [
+  { label: '> 1000', value: '#800026' },
+  { label: '1000 - 500', value: '#BD0026' },
+  { label: '500 - 200', value: '#E31A1C' },
+  { label: '200 - 100', value: '#FC4E2A' },
+  { label: '100 - 50', value: '#FD8D3C' },
+  { label: '50 - 20', value: '#FEB24C' },
+  { label: '20 - 10', value: '#FED976' },
+  { label: '10 - 1', value: '#FFEDA0' },
+  { label: '0', value: '#FFFFFF00' },
+];
 function getcolorFunction(d) {
   return d > 1000
     ? '#800026'
@@ -56,6 +66,7 @@ function InnerMap({
   handleLocationFilter,
   location,
   locationMatches,
+  setActive,
   handlePaysFilter,
 }) {
   const onEachCountry = (country, layer) => {
@@ -79,6 +90,10 @@ function InnerMap({
       setZoomLevel(mapEvents.getZoom());
     },
   });
+
+  useEffect(() => {
+    setActive(zoom < 4);
+  }, [zoom]);
 
   const disableFilter = () => {
     const a = handleLocationFilter(null);
@@ -161,22 +176,50 @@ export default function Maps() {
     (d) => d.pays
   );
 
+  const [activate, setActive] = useState(false);
   return (
-    <MapContainer
-      style={{ height: '400px' }}
-      center={[51.505, -0.09]}
-      zoom={5}
-      scrollWheelZoom
-      tap={handleLocationFilter(null)}
-    >
-      <InnerMap
-        handleLocationFilter={handleLocationFilter}
-        contriesMatches={contriesMatches}
-        location={location}
-        handlePaysFilter={handlePaysFilter}
-        locationMatches={locationMatches}
-        data={ufcData}
-      />
-    </MapContainer>
+    <div>
+      <MapContainer
+        style={{ height: '400px' }}
+        center={[51.505, -0.09]}
+        zoom={5}
+        scrollWheelZoom
+        tap={handleLocationFilter(null)}
+      >
+        <InnerMap
+          setActive={setActive}
+          handleLocationFilter={handleLocationFilter}
+          contriesMatches={contriesMatches}
+          location={location}
+          handlePaysFilter={handlePaysFilter}
+          locationMatches={locationMatches}
+          data={ufcData}
+        />
+      </MapContainer>
+      {activate && (
+        <div
+          style={{
+            display: 'flex',
+            flexFlow: 'row',
+            alignItems: 'end',
+            justifyContent: 'end',
+          }}
+        >
+          {labels.map(({ value, label }) => (
+            <div
+              style={{
+                background: value,
+                color: ['#FED976', '#FFEDA0', '#FFFFFF00'].includes(value)
+                  ? 'black'
+                  : 'white',
+                padding: '6PX',
+              }}
+            >
+              {label}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
